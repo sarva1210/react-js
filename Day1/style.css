@@ -1,0 +1,34 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#parent {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+#box {
+  height: 200px;
+  width: 200px;
+  background-color: crimson;
+}
+
+#circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: cadetblue;
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
