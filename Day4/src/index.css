@@ -1,0 +1,177 @@
+/* @import "tailwindcss"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+.main{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: gainsboro;
+  padding: 40px;
+  display: flex;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+
+
+.card{
+  height: 490px;
+  width: 340px;
+  background-color: #ffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+     padding: 15px 25px;
+}
+
+
+#avail{
+  background-color: rgb(60, 224, 60);
+  color: white;
+  border-radius: 32px;
+  padding: 5px 12px;
+  font-size: .9rem;
+  
+}
+
+
+#charge-money{
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: right;
+  
+
+}
+
+.profile-holder{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card .profile-holder img{
+  height: 100%;
+  width: 100%;
+  object-position: top;
+  object-fit: cover;
+}
+
+
+.information-holder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 6px;
+}
+
+.information-holder > span:nth-child(1){
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+
+.information-holder > span:nth-child(2){
+   font-size: .94rem;
+  color:rgb(99, 95, 95)
+}
+
+.information-holder > span:nth-child(3){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+   font-size: .94rem;
+  color:green;
+}
+
+
+.tags{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    padding: 15px 25px;
+  
+}
+
+.tags span{
+  border-radius: 32px;
+  border: 1px solid gainsboro;
+  padding: 5px 15px;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.tags span:nth-child(4){
+  background-color: rgb(31, 143, 235);
+  color: white;
+}
+
+
+.card>span{
+ text-align: center;
+  display: inline-block;
+ font-size: 1rem;
+ color: rgb(179, 173, 173);
+   padding: 15px 25px;
+}
+
+.footer{
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  cursor: pointer;
+  transition: all 0.4s linear;
+  position: relative;
+}
+
+.footer span{
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.footer:hover{
+  background-color: rgb(31, 143, 235);
+  color:white
+}
+
+.footer::after{
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  background-color: rgb(187, 183, 183);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.footer:hover::after {
+  opacity: 0;
+}
