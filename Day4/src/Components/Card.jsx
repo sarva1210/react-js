@@ -7,7 +7,7 @@ const Card = ({item}) => {
   return (
     <div className='card'>
        <div className="header">
-       {isAvailable&& <span id='avail'>avaliable</span>}
+       {isAvailable&& <span id='avail'>Avaliable</span>}
         <span id='charge-money'>{charge}</span>
        </div>
        <div className='profile-holder'>
