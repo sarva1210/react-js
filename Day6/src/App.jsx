@@ -9,17 +9,16 @@ const App = () => {
 
       <div className="flex gap-6" >
         <button className="px-6 py-3 bg-white text-pink-600 font-semibold rounded-full hover:bg-gray-400 active:scale-90 transition" onClick={() => setA(a - 1)}>
-          Decrease
+          DECREASE
         </button>
 
         <button className="px-6 py-3 bg-pink-600 text-white font-semibold rounded-full hover:bg-pink-800 active:scale-90 transition" onClick={() => setA(a + 1)}>
-          Increase
+          INCREASE
         </button>
       </div>
 
     </div>
   );
 };
-
 
 export default App
