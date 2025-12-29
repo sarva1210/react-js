@@ -1,9 +1,23 @@
-import React from "react"
+import React from "react";
+import Card from "./Components/Card";
 
-const App =()=>{
-  return(
-    <h1>App</h1>
-  )
-}
+const App = () => {
+  const cardData = {
+    username: "Anubhav",
+    role: "Engineer",
+    email: "anu@gmail.com",
+  };
 
-export default App
+  return (
+    <>
+      <Card
+        username={cardData.username}
+        role={cardData.role}
+        email={cardData.email}
+      />
+    </>
+  );
+};
+
+export default App;
+
