@@ -1,9 +1,71 @@
-*{
-margin:0%;
-padding:0%;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-html,body{
-width: 100%;
-height: 100%;
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(132deg,#E8DBC4,#6D2932, #561C24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.app {
+  background: #d3d1d1;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 320px;
+}
+
+
+.username {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+
+.counter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #070a29;
+  margin: 1rem 0;
+}
+
+
+button {
+  padding: 0.7rem 1.6rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(220deg,#C7B7A3,#6D2932, #561C24);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #1d2671;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
