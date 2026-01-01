@@ -8,14 +8,20 @@ body {
 .nav {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  padding: 5px;
   background: #020617;
 }
 
 .nav input {
-  margin-top: 10px;
+  margin-top: 14px;
   padding: 10px 40px;
-  margin-right: 10px;
+  margin-right: 14px;
+}
+
+.nav h2{
+  font-weight: 800;
+  font-size: 25px;
+  margin-left: 20px;
 }
 
 .movie-grid {
@@ -31,6 +37,17 @@ body {
   text-decoration: none;
   color: white;
   border-radius: 8px;
+
+  transition: 
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.card:hover{
+  transform: scale(0.98);
+  background-color: rgb(188, 186, 186);
+  color: #020617;
 }
 
 .card img {
