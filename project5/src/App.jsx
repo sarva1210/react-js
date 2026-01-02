@@ -1,57 +1,82 @@
-import { useEffect, useState } from "react";
-import TodoInput from "./Components/TodoInput";
+import { useState } from "react";
+import TopCard from "./Components/TopCard";
+import StatsCard from "./Components/StatsCard";
+import AddTaskCard from "./Components/AddTaskCard";
 import TodoList from "./Components/TodoList";
-import Filters from "./Components/Filters";
 
-const App =()=>{
+const App = () => {
   const [todos, setTodos] = useState([]);
-  const [filter, setFilter] = useState([]);
-
-  useEffect (()=>{
-    const savedTodos = JSON.parse(localStorage.getItem("todos"));
-    if (savedTodos){
-      setTodos(savedTodos);
-    }
-  },[]);
-
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
+  const [filter, setFilter] = useState("all");
 
   const addTodo = (text) => {
     setTodos([...todos, { id: Date.now(), text, completed: false }]);
+  };
+
+  const toggleTodo = (id) => {
+    setTodos(
+      todos.map(todo =>
+        todo.id === id
+          ? { ...todo, completed: !todo.completed }
+          : todo
+      )
+    );
   };
 
   const deleteTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
-  const toggleTodo = (id) =>{
-    setTodos( todos.map(todo => todo.id === id ? { ...todo, completed: !todo.completed } : todo ));
-  };
-
   const editTodo = (id, newText) => {
-    setTodos( todos.map(todo => todo.id === id ? { ...todo, text: newText } : todo ));
+    setTodos(
+      todos.map(todo =>
+        todo.id === id
+          ? { ...todo, text: newText }
+          : todo
+      )
+    );
   };
 
-   const filteredTodos = todos.filter(todo => {
+  const filteredTodos = todos.filter(todo => {
     if (filter === "active") return !todo.completed;
     if (filter === "completed") return todo.completed;
     return true;
   });
 
-  const completedCount = todos.filter(todo => todo.completed).length;
-
   return (
+    <div className="dashboard">
+      <TopCard />
 
-    <div className="app" >
-      <h1>Task Manager</h1>
-      <p className="stats" > {completedCount} / {todos.length} task completed</p>
+      <div className="bottom-section">
+        <div className="stats-row">
+          <StatsCard
+            title="All Tasks"
+            count={todos.length}
+            active={filter === "all"}
+            onClick={() => setFilter("all")}
+          />
+          <StatsCard
+            title="Active"
+            count={todos.filter(t => !t.completed).length}
+            active={filter === "active"}
+            onClick={() => setFilter("active")}
+          />
+          <StatsCard
+            title="Completed"
+            count={todos.filter(t => t.completed).length}
+            active={filter === "completed"}
+            onClick={() => setFilter("completed")}
+          />
+        </div>
 
-      <TodoInput addTodo={addTodo}/>
-      <Filters filter={filter} setFilter={setFilter}/>
+        <AddTaskCard addTodo={addTodo} />
+      </div>
 
-      <TodoList todos={filteredTodos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} editTodo={editTodo}/>
+      <TodoList
+        todos={filteredTodos}
+        toggleTodo={toggleTodo}
+        deleteTodo={deleteTodo}
+        editTodo={editTodo}
+      />
     </div>
   );
 };

@@ -1,13 +1,14 @@
 import { useState } from "react";
 
-const TodoItem = ({ todo, deleteTodo, toggleTodo, edittodo})=>{
+const TodoItem = ({ todo, deleteTodo, toggleTodo, editTodo }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [newText , setNewText] = useState(todo.text);
 
-    const handleSave = () =>{
-        edittodo(todo.id, newText);
+    const handleSave = () => { 
+        editTodo(todo.id, newText);
         setIsEditing(false);
     };
+
 
     return (
         <div className={`todo-item ${todo.completed ? "done" : ""}`} >
