@@ -12,6 +12,7 @@ const Navbar = () => {
         <Link className='hover:text-stone-300 transition' to='/product'>Product</Link>
         <Link className='hover:text-stone-300 transition' to='/product/MenProduct'>MenProduct</Link>
         <Link className='hover:text-stone-300 transition' to='/product/Women'>WomenProduct</Link>
+        <Link className='hover:text-stone-300 transition' to='/courses'>Courses</Link>
       </div>
     </div>
   )
