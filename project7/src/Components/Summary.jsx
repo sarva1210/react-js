@@ -12,7 +12,7 @@ const Summary =({transactions}) =>{
     return (
         <div className="flex justify-between bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mb-4" >
             <div>
-                <h4 className="text-sm" >Income</h4>
+                <h4 className="text-sm" >INCOME</h4>
                 <p className="text-red-500 font-bold" >₹{Math.abs(expense)}</p>
             </div>
         </div>
