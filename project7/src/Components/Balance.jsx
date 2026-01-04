@@ -1,6 +1,10 @@
 import React from "react";
 
 const Balance =({transactions})=>{
+
+    const total = transactions.reduce((acc, curr)=>{
+        return acc + curr.amount;
+    },0);
     return(
         <div className="my-4 text-center">
             <h4 className="text-sm text-gray-400">Your Balance</h4>
