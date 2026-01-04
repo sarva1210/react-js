@@ -44,7 +44,7 @@ const App = () => {
     <div className="min-h-screen w-full bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
       <div className="w-full min-h-screen bg-white dark:bg-gray-800 px-8 py-4">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-bold">Expense Tracker</h2>
+          <h2 className="text-xl font-bold">EXPENSE TRACKER</h2>
           <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
         </div>
 
