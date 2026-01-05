@@ -12,7 +12,7 @@ const Search =()=>{
         if (!query) return;
 
         const res = await axios.get(
-            `https://itunes.apple.com/search?term=${query}&media=music&limit=12`
+            `https://itunes.apple.com/search?term=${query}&media=music&limit=20`
         );
 
         const formatted = res.data.results 
