@@ -7,7 +7,7 @@ const Sidebar = () => {
       <span className="text-green-500 text-xl">♪</span>
 
       <NavLink to="/" className="text-xl opacity-70 hover:opacity-100">
-        🏠
+        🏡
       </NavLink>
 
       <NavLink to="/search" className="text-xl opacity-70 hover:opacity-100">
