@@ -8,7 +8,7 @@ const PlayerProvider = ({children})=>{
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
 
-    const PlaySong = (songs, index)=>{
+    const playSong = (songs, index)=>{
         setPlaylist(songs);
         setCurrentIndex(index);
         setIsPlaying(true);
@@ -25,7 +25,7 @@ const PlayerProvider = ({children})=>{
     };
 
     return(
-        <PlayerContext.Provider value={{playlist, currentIndex, isPlaying, setIsPlaying, PlaySong, nextSong, prevSong}}>{children}</PlayerContext.Provider>
+        <PlayerContext.Provider value={{playlist, currentIndex, isPlaying, setIsPlaying, playSong, nextSong, prevSong}}>{children}</PlayerContext.Provider>
     )
 
 }
