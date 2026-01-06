@@ -13,7 +13,7 @@ const App = () => {
     <div>
 
       <h1>Theme is {theme}</h1>
-      <Navbar changeTheme={changeTheme} />
+      <Navbar theme={theme} changeTheme={changeTheme} />
       
     </div>
   )

@@ -5,7 +5,7 @@ const Navbar = (props) => {
   const [newTheme, setNewTheme] = useState('')
 
   return (
-    <div className='nav'>
+    <div className='nav' style={{ backgroundColor: props.theme }}>
       <form onSubmit={(e) => {
         e.preventDefault()
         props.changeTheme(newTheme)
@@ -16,8 +16,8 @@ const Navbar = (props) => {
         onChange={(e)=>{
           setNewTheme(e.target.value)
         }}
-        type=" text" 
-        placeholder='Enter theme' 
+        type="text" 
+        placeholder='Enter theme (red / #000 / rgb)' 
         />
         <button>Submit</button>
       </form>
