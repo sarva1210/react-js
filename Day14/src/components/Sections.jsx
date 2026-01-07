@@ -7,7 +7,7 @@ const Sections = () => {
   console.log(data);
 
   return (
-    <div className='h-120 bg-zinc-400'>
+    <div className='h-120 bg-zinc-300'>
       <h1 className='text-xl'>All Sections</h1>
     </div>
   )
