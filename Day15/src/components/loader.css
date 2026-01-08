@@ -1,0 +1,135 @@
+#wifi-loader {
+  --front-color: #6366f1; /* indigo-500 */
+  --back-color: #a5b4fc; /* indigo-300 */
+  --text-color: #9ca3af; /* gray-400 */
+}
+
+#wifi-loader svg circle {
+  fill: none;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(-100deg);
+  transform-origin: center;
+}
+
+#wifi-loader svg circle.back {
+  stroke: var(--back-color);
+}
+
+#wifi-loader svg circle.front {
+  stroke: var(--front-color);
+}
+
+/* Dash configs */
+.circle-outer circle {
+  stroke-dasharray: 62.75 188.25;
+}
+
+.circle-middle circle {
+  stroke-dasharray: 42.5 127.5;
+}
+
+.circle-inner circle {
+  stroke-dasharray: 22 66;
+}
+
+/* Animations */
+.circle-outer .back {
+  animation: outer 1.8s ease infinite 0.3s;
+}
+.circle-outer .front {
+  animation: outer 1.8s ease infinite 0.15s;
+}
+
+.circle-middle .back {
+  animation: middle 1.8s ease infinite 0.25s;
+}
+.circle-middle .front {
+  animation: middle 1.8s ease infinite 0.1s;
+}
+
+.circle-inner .back {
+  animation: inner 1.8s ease infinite 0.2s;
+}
+.circle-inner .front {
+  animation: inner 1.8s ease infinite 0.05s;
+}
+
+/* Text animation */
+#wifi-loader .text::before,
+#wifi-loader .text::after {
+  content: attr(data-text);
+}
+
+#wifi-loader .text::before {
+  color: var(--text-color);
+}
+
+#wifi-loader .text::after {
+  color: var(--front-color);
+  position: absolute;
+  left: 0;
+  animation: textAnim 3.6s ease infinite;
+}
+
+/* Keyframes */
+@keyframes outer {
+  0% {
+    stroke-dashoffset: 25;
+  }
+  25% {
+    stroke-dashoffset: 0;
+  }
+  65% {
+    stroke-dashoffset: 301;
+  }
+  80%,
+  100% {
+    stroke-dashoffset: 276;
+  }
+}
+
+@keyframes middle {
+  0% {
+    stroke-dashoffset: 17;
+  }
+  25% {
+    stroke-dashoffset: 0;
+  }
+  65% {
+    stroke-dashoffset: 204;
+  }
+  80%,
+  100% {
+    stroke-dashoffset: 187;
+  }
+}
+
+@keyframes inner {
+  0% {
+    stroke-dashoffset: 9;
+  }
+  25% {
+    stroke-dashoffset: 0;
+  }
+  65% {
+    stroke-dashoffset: 106;
+  }
+  80%,
+  100% {
+    stroke-dashoffset: 97;
+  }
+}
+
+@keyframes textAnim {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  50% {
+    clip-path: inset(0);
+  }
+  100% {
+    clip-path: inset(0 0 0 100%);
+  }
+}
