@@ -13,10 +13,10 @@ export default function Projects() {
     ];
 
     return (
-        <section className="max-w-[1280px] mx-auto px-6 md:px-16 py-28">
+        <section className="max-w-[1280px] mx-auto pt-0 px-6 md:px-16 pb-0 py-10">
             <div className="flex justify-between items-end mb-14">
                 <h2 className="text-[28px] font-medium">Recent Projects</h2>
-                <p className="text-sm text-gray-400 max-w-xs">Step into the world of our most recent projects.</p>
+                <p className="text-sm text-gray-700 max-w-xs">Step into the world of our most recent projects.</p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-10">

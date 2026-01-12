@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CTA() {
   return (
-    <section className="max-w-[1280px] mx-auto px-6 md:px-16 my-32">
+    <section className="max-w-[1280px] mx-auto pt-0 px-6 md:px-16 my-12">
 
         <div className="bg-white rounded-[32px] p-16 text-center shadow-sm">
 
