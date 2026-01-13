@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+.pin {
+  column-count: 1;
+  column-gap: 18px;
+}
+
+@media (min-width: 640px) {
+  .pin {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pin {
+    column-count: 4;
+  }
+}
+
+.pin-item {
+  break-inside: avoid;
+  margin-bottom: 18px;
+}

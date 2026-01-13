@@ -8,13 +8,13 @@ export default function AboutPage() {
 
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p className="text-gray-600 leading-relaxed"> Astratto is a creative studio focused on building strong brand identities, animation experiences, and stunning visuals that leave a lasting impression.</p>
+          <p className="text-gray-600 leading-relaxed"> Astratto is a creative studio built on the idea that design should feel alive. We craft strong brand identities, animated experiences, and stunning visuals that speak with clarity and emotion.</p>
 
-          <p className="text-gray-600 leading-relaxed mt-4"> We collaborate with brands worldwide to craft modern design systems, motion graphics, and creative storytelling.</p>
+          <p className="text-gray-600 leading-relaxed mt-4"> Working with brands across the globe, we combine modern design systems, motion graphics, and storytelling to create work that not only looks great—but feels unforgettable.</p>
         </div>
 
-        <div className="bg-white rounded-[28px] p-10 shadow-sm">
-          <img src={heroLeft} alt="" className="w-full object-contain" />
+        <div className="bg-white rounded-[40px] px-10 shadow-sm">
+          <img src={heroLeft} alt="" className="w-full h-[200px] object-contain" />
         </div>
       </div>
     </section>
