@@ -1,19 +1,17 @@
 import React from "react";
+import {Routes,Route} from "react-router-dom"
 import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
-import Services from "./Components/Services";
-import Projects from "./Components/Projects";
-import CTA from "./Components/CTA";
 import Footer from "./Components/Footer";
 
 export default function App(){
   return(
     <>
      <Navbar/>
-     <Hero/>
-     <Services/>
-     <Projects/>
-     <CTA/>
+
+     <Routes>
+          <Route path ="/" element={<Home/>}/>
+     </Routes>
+
      <Footer/>
     </>
   )
