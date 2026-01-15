@@ -3,3 +3,31 @@
 html {
   scroll-behavior: smooth;
 }
+
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background:#f7f8fb ;
+}
+
+.containerx{
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.btnPrimary {
+  @apply px-5 py-2 rounded-full bg-[#0b2f44] text-white font-semibold hover:bg-[#092636] transition active:scale-95;
+}
+
+.btnOutline {
+  @apply px-5 py-2 rounded-full border border-slate-300 bg-white text-slate-800 hover:bg-slate-50 transition active:scale-95;
+}
+
+.cardSoft {
+  @apply rounded-2xl bg-white border border-slate-200 shadow-sm;
+}
+.cardHover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.shadowPro {
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+}
