@@ -5,27 +5,6 @@ export const features = [
   { id: 4, title: "Top Services", desc: "Lorem ipsum dolor sit amet consectetur." },
 ];
 
-export const services = [
-  {
-    id: 1,
-    title: "Security Camera",
-    desc: "We bring the best quality cameras for monitoring and safety.",
-    icon: "📷",
-  },
-  {
-    id: 2,
-    title: "Fire Detection",
-    desc: "We bring the best quality fire detection safety systems.",
-    icon: "🔥",
-  },
-  {
-    id: 3,
-    title: "Smart Home",
-    desc: "Smart home monitoring solutions for better control and protection.",
-    icon: "🏠",
-  },
-];
-
 export const processSteps = [
   {
     id: 1,
