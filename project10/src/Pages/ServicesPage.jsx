@@ -10,7 +10,7 @@ const ServicesPage = () => {
       <Services />
       <Footer />
     </>
-  );
-};
+  )
+}
 
 export default ServicesPage;
