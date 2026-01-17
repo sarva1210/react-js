@@ -34,7 +34,7 @@ export const blogs = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     date: "26",
     category: "Uncategorized",
-    img: "https://images.unsplash.com/photo-1580894741305-1e4e18f4cd1f?auto=format&fit=crop&w=1200&q=60",
+    img: "https://plus.unsplash.com/premium_photo-1663040454423-30ce7ed209ad?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
@@ -50,7 +50,7 @@ export const blogs = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     date: "26",
     category: "Uncategorized",
-    img: "https://images.unsplash.com/photo-1580894903752-64d1d3e0b7fd?auto=format&fit=crop&w=1200&q=60",
+    img: "https://plus.unsplash.com/premium_photo-1676618539992-21c7d3b6df0f?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
