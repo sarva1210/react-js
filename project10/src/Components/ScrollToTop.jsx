@@ -14,13 +14,8 @@ const ScrollToTop = () => {
   if (!show) return null;
 
   return (
-    <button
-      onClick={goTop}
-      className="fixed bottom-5 right-5 w-12 h-12 rounded-full bg-[#0b2f44] text-white shadowPro hover:bg-[#092636] transition active:scale-95 z-50"
-    >
-      ↑
-    </button>
-  );
-};
+    <button onClick={goTop} className="fixed bottom-5 right-5 w-12 h-12 rounded-full bg-[#0b2f44] text-white shadowPro hover:bg-[#092636] transition active:scale-95 z-50">↑</button>
+  )
+}
 
 export default ScrollToTop;
