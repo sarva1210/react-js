@@ -11,7 +11,7 @@ const Partners = () => {
         <FaAmazon size={28} />
       </div>
     </section>
-  );
-};
+  )
+}
 
 export default Partners;
